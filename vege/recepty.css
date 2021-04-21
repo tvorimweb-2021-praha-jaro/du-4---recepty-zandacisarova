@@ -38,15 +38,16 @@ body {
 /* ----- DOLE BUDE TVOJE CSS ----- */
 /* ------------------------------- */
 :root {
-    --barvatextu: white;
+    --barvaTextu: white;
+    --stinTextu: black;
 }
 
+@media screen and (min-width: 375px),(max-width: 479px) {
 
 body {
-    width: 375px;
-    height: 667;
+    
     margin: auto;
-    color: var(--barvatextu);
+    color: var(--barvaTextu);
 }
 
 .paticka {
@@ -55,23 +56,25 @@ body {
 
 .hlavniRecept,
 .malyRecept {
-    border: 1px solid var(--barvatextu);
+    border: 1px solid var(--barvaTextu);
 }
 
 .hlavniRecept {
     width: 100%;
     min-height: 200px;
-    background-image: url(../vege/images/salat.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(../vege/images/salat.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     display: flex;
     flex-flow: column-reverse;
+    justify-content: space-between;
+    padding: 0.5rem;
 }
 
 .hlavniRecept h1 {
     font-size: 1.75rem;
-    padding: 0.5rem;
+    
 }
 
 .maleRecepty {
@@ -79,15 +82,9 @@ body {
     
 }
 
-.malyRecept {
-    width: 100%;
-    min-height: 90px;
-    
-}
-
 .malyRecept h1 {
     font-size: 1.2rem;
-    padding: 0.5rem;
+    
 }
 
 .malyRecept1 {
@@ -111,12 +108,17 @@ body {
 .malyRecept2,
 .malyRecept3,
 .malyRecept4 {
-    background-image: var(--pozadi);
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), var(--pozadi);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     display: flex;
     flex-flow: column-reverse;
+    justify-content: space-between;
+    padding: 0.5rem;
+    width: 100%;
+    min-height: 90px;
+    border: 0.5px solid var(--barvaTextu);
 }
 
 .navigace {
@@ -128,4 +130,49 @@ body {
 h3 {
     font-size: 0.8rem;
     font-weight: 400;
+    margin-top: 0;
+}
+
+h1 {
+    margin-bottom: 0;
+    font-weight: 800;
+}
+
+h1,
+h3 {
+    text-shadow: 0 2px 3px var(--stinTextu);
+    
+}
+}
+@media screen and (min-width: 480px), (max-width: 860px) {
+
+    body {
+        width: 768px;
+        height: 1024px;
+    }
+
+    .hlavniRecept {
+        min-height: 250px;
+        padding: 1.25rem;
+    }
+
+    .hlavniRecept h1 {
+        font-size: 2rem;
+    }
+
+    .maleRecepty {
+        display: flex;
+        justify-content: flex-start;
+        flex-flow: column wrap;
+    }
+
+    .malyRecept1,
+    .malyRecept2,
+    .malyRecept3,
+    .malyRecept4 {
+        max-width: 50%;
+        font-size: 1.5rem;
+        min-height: 150px;
+        padding: 1.25rem;
+    }
 }
