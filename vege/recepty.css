@@ -125,12 +125,12 @@ body {
 }
 
 .navigace {
-    padding: 0.5rem;
     display: flex;
     justify-content: space-between;
 }
 
-h3 {
+.sekce , 
+.coments {
     font-size: 0.8rem;
     font-weight: 400;
     margin-top: 0;
@@ -142,7 +142,8 @@ h1 {
 }
 
 h1,
-h3 {
+.sekce , 
+.coments {
     text-shadow: 0 2px 3px var(--stinTextu);
     
 }
@@ -162,6 +163,7 @@ h3 {
     .maleRecepty {        
         display: flex;
         flex-flow: row wrap;
+        
     }
 
     .maleRecepty h1 {
