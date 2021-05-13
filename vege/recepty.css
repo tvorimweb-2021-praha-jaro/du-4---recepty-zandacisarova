@@ -21,12 +21,14 @@ středně široké obrazovky:
 body {
     margin: 0;
     font-family: 'Source Sans Pro', sans-serif;
+    color: var(--barvaTextu);
 }
 
 .paticka {
     text-align: center;
     font-size: 14px;
     color: silver;
+    display: none;
 }
 
 .paticka a {
@@ -42,17 +44,6 @@ body {
     --stinTextu: black;
 }
 
-
-
-body {
-    
-    margin: auto;
-    color: var(--barvaTextu);
-}
-
-.paticka {
-    display: none;
-}
 
 .hlavniRecept,
 .malyRecept1,
@@ -85,7 +76,7 @@ body {
     
 }
 
-.maleRecepty h1 {
+.maleRecepty h2 {
     font-size: 1.2rem;
     
 }
@@ -136,12 +127,14 @@ body {
     margin-top: 0;
 }
 
-h1 {
+h1,
+h2 {
     margin-bottom: 0;
     font-weight: 800;
 }
 
 h1,
+h2,
 .sekce , 
 .coments {
     text-shadow: 0 2px 3px var(--stinTextu);
@@ -166,7 +159,7 @@ h1,
         
     }
 
-    .maleRecepty h1 {
+    .maleRecepty h2 {
         font-size: 1.5rem;
     }
 
@@ -204,15 +197,15 @@ h1,
     }
 
     .hlavniRecept {
-        max-width: 400px;
-        min-height: 400px;
+        max-width: 700px;
+        min-height: 700px;
     }
 
     .hlavniRecept h1 {
         font-size: 3rem;
     }
 
-    .maleRecepty h1 {
+    .maleRecepty h2 {
         font-size: 1.75rem;
     }
 
